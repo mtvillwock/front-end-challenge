@@ -1,8 +1,13 @@
 <div class="product-container col-lg-4 col-md-6 col-sm-12 col-xs-12 {custom_class}">
   <button class="delete-product">X</button>
-  <a href="{url}">
-    <img class="product-image" src="{image}">
-    <div class="description text-center">
+  <div class="image-container">
+    <div class="overlay hidden text-center">
+      {description}
+    </div>
+    <img src="{image}">
+  </div>
+  <div class="description text-center">
+    <a href="{url}">
       <div class="product-title">{title}</div>
       <div class="product-tagline">{tagline}</div>
     </div>
