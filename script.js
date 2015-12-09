@@ -4,6 +4,14 @@
     function ProductView() {
         var view = {};
 
+        view.showLoadingGif = function() {
+            $("#loadingGifContainer").removeClass('hidden');
+        }
+
+        view.hideLoadingGif = function() {
+            $("#loadingGifContainer").addClass('hidden');
+        }
+
         view.updateDOM = function(products) {
             var i = 0
             thishtml = '';
@@ -41,6 +49,48 @@
     function ProductController() {
         var controller = {};
         controller.products = [];
+
+        controller.getProducts = function() {
+            return $.getJSON('data.json')
+        }
+
+        controller.getTemplate = function() {
+            return $.get('product-template.html')
+        }
+
+        controller.addProduct = function(productData, index) {
+            var product = new productObj(productData, index);
+            controller.products.push(product);
+        }
+
+        controller.init = function() {
+            productView.showLoadingGif();
+            controller.getProducts()
+                .then(function(response) {
+                    controller.getTemplate()
+                        .then(function(template) {
+
+                            var products = response.sales;
+                            var template = template;
+
+                            products.forEach(function(productData, index) {
+                                controller.addProduct(productData, index)
+                            })
+
+                            productCtrl.products.forEach(function(product) {
+                                product.updatehtml(template);
+                            })
+
+                            productView.updateDOM(productCtrl.products);
+                            productView.handleDelete();
+                            productView.hideLoadingGif();
+                        }, function(err) {
+                            console.log("error fetching products")
+                        })
+                }, function(err) {
+                    console.log("error fetching products")
+                })
+        }
         return controller;
     }
     // immediately create controller
@@ -68,30 +118,32 @@
         return product;
     }
 
-    $.getJSON('data.json')
-        .then(function(response) {
-            $.get('product-template.html')
-                .then(function(template) {
+    productCtrl.init();
 
-                    var products = response.sales;
-                    var template = template;
+    // $.getJSON('data.json')
+    // .then(function(response) {
+    //     $.get('product-template.html')
+    //         .then(function(template) {
 
-                    products.forEach(function(productData, index) {
-                        var product = new productObj(response.sales[index], index);
-                        productCtrl.products.push(product);
-                    })
+    //             var products = response.sales;
+    //             var template = template;
 
-                    productCtrl.products.forEach(function(product) {
-                        product.updatehtml(template);
-                    })
+    //             products.forEach(function(productData, index) {
+    //                 var product = new productObj(response.sales[index], index);
+    //                 productCtrl.products.push(product);
+    //             })
 
-                    productView.updateDOM(productCtrl.products);
-                    productView.handleDelete();
-                }, function(err) {
-                    console.log("error fetching products")
-                })
-        }, function(err) {
-            console.log("error fetching products")
-        })
+    //             productCtrl.products.forEach(function(product) {
+    //                 product.updatehtml(template);
+    //             })
+
+    //             productView.updateDOM(productCtrl.products);
+    //             productView.handleDelete();
+    //         }, function(err) {
+    //             console.log("error fetching products")
+    //         })
+    // }, function(err) {
+    //     console.log("error fetching products")
+    // })
 
 }());
