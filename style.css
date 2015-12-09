@@ -4,6 +4,8 @@ a{text-decoration: none; color: #0096ff;}
 .page-title{font-size:36px;}
 .page-tagline{font-size: 18px;}
 
+.delete-product{color: red; float: right;}
+
 .product-container{width:300px; border:1px solid #aaa; margin:10px; display:inline-block;}
 .product-container img{width:100%; height:auto;}
 .row{width:946px;}
