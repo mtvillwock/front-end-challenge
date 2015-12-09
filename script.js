@@ -24,7 +24,7 @@
 
         view.handleDelete = function() {
             $('.delete-product').on('click', function() {
-                $(this).parent().remove();
+                $(this).closest('.product-container').remove();
             })
         }
 
