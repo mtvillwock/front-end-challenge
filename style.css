@@ -10,16 +10,41 @@ a {
 .page-title{font-size:36px;}
 .page-tagline{font-size: 18px;}
 
-.delete-product{
-  color: red;
-  float: right;
-}
+
+/*
+PRODUCT CONTAINER
+*/
 
 .product-container{
   /*width:300px;*/
   border: 1px solid #aaa;
   margin-bottom: 15px;
   display:inline-block;
+}
+
+.image-container {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  display:block;
+  position:absolute;
+  z-index:1;
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  margin: auto;
+  border:1px solid #900;
+  background-color:#fff;
+}
+
+.product-container .delete-product{
+  color: red;
+  float: right;
 }
 
 .product-container a {
