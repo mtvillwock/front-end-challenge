@@ -1,18 +1,31 @@
-body{font-family: "Arial"}
-a{text-decoration: none; color: #0096ff;}
+body {
+  font-family: "Arial";
+}
+
+a {
+  text-decoration: none;
+  color: #0096ff;
+}
 
 .page-title{font-size:36px;}
 .page-tagline{font-size: 18px;}
 
-.delete-product{color: red; float: right;}
+.delete-product{
+  color: red;
+  float: right;
+}
 
-.product-container{width:300px; border:1px solid #aaa; margin:10px; display:inline-block;}
-.product-container img{width:100%; height:auto;}
-.row{width:946px;}
+.product-container{
+  /*width:300px;*/
+  border: 1px solid #aaa;
+  margin-bottom: 15px;
+  display:inline-block;
+}
 
-.col1{float:left;}
-.col2{margin:10px auto;}
-.col3{float:right;}
+.product-container img{
+  width:100%;
+  height:auto;
+}
 
 .product-title{font-size:16px;}
 .product-tagline{font-size:16px;}

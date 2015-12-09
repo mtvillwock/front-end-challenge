@@ -10,16 +10,16 @@
             for (i = 0; i < products.length; i++) {
                 if (i % 3 == 0) {
                     thishtml += "<div class='row'>";
-                    console.log("START")
+                    // console.log("START")
                 }
                 thishtml += products[i].htmlview;
                 if ((i % 3 == 2) || i == (products.length - 1)) {
                     thishtml += "</div>";
-                    console.log("FINISH")
+                    // console.log("FINISH")
                 }
             }
-            console.log("html to append is:", thishtml);
-            $("#content").append(thishtml)
+
+            $("#content").append(thishtml);
         }
 
         view.handleDelete = function() {
