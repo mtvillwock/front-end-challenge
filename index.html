@@ -1,18 +1,28 @@
 <html>
-  <head>
-    <title>Touch of Modern</title>
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    
-    <link href="style.css" media="screen" rel="stylesheet">
-  </head>
-<body>
-  
-<div id="body container">
-  <h1 class="title">Welcome to Touch of Modern</h1>
-  <div class="tagline">Live beyond expectations</div>
-  <div id="content"></div>
-</div>
+<head>
+  <title>Touch of Modern</title>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 
-<script src="script.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link href="style.css" media="screen" rel="stylesheet">
+</head>
+<body>
+
+  <div id="body" >
+    <header class="text-center">
+      <h1 class="page-title">Welcome to Touch of Modern</h1>
+      <div class="page-tagline">Live beyond expectations</div>
+    </header>
+    <section id="content" class="container">
+    </section>
+  </div>
+  <!-- Show loading gif while querying data -->
+  <div id="loadingGifContainer" class="text-center hidden">
+    <img src="images/loading.gif">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
