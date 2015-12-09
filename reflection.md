@@ -9,8 +9,9 @@
 
 ## Styling
 
--
+- set Bootstrap columns to show 1, 2, or 3 products per row depending on size of user's viewport.
+- set font-sizes as requested.
 
 ## Overlay
 
--
+- used jQuery to add/remove `hidden` class from `overlay` div.
