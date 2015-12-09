@@ -22,11 +22,24 @@ a {
   display:inline-block;
 }
 
+.product-container a {
+  text-decoration: none;
+}
+
 .product-container img{
   width:100%;
   height:auto;
 }
 
-.product-title{font-size:16px;}
-.product-tagline{font-size:16px;}
-.product-description{padding:10px;}
+.product-title{
+  font-size:16px;
+  font-weight: bolder;
+}
+
+.product-tagline{
+  font-size:16px;
+}
+
+.product-description{
+  padding:10px;
+}

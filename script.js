@@ -24,7 +24,10 @@
 
         view.handleDelete = function() {
             $('.delete-product').on('click', function() {
-                $(this).closest('.product-container').remove();
+                var product = $(this).closest('.product-container');
+                product.fadeOut("slow", function() {
+                    product.remove();
+                });
             })
         }
 
