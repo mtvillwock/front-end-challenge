@@ -1,5 +1,8 @@
 body{font-family: "Arial"}
-a{text-decoration: none;}
+a{text-decoration: none; color: #0096ff;}
+
+.page-title{font-size:36px;}
+.page-tagline{font-size: 18px;}
 
 .product-container{width:300px; border:1px solid #aaa; margin:10px; display:inline-block;}
 .product-container img{width:100%; height:auto;}
@@ -9,5 +12,6 @@ a{text-decoration: none;}
 .col2{margin:10px auto;}
 .col3{float:right;}
 
-.title{font-size:20px;}
-.description{padding:10px;}
+.product-title{font-size:16px;}
+.product-tagline{font-size:16px;}
+.product-description{padding:10px;}
