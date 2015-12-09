@@ -1,7 +1,0 @@
-# Reflection
-
-## JS Refactor
-
-## Styling
-
-##
