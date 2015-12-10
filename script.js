@@ -16,24 +16,17 @@
             var i = 0
             thishtml = '';
             for (i = 0; i < products.length; i++) {
-                if (i % 3 == 0) {
-                    thishtml += "<div class='row'>";
-                    // console.log("START")
-                }
                 thishtml += products[i].htmlview;
-                if ((i % 3 == 2) || i == (products.length - 1)) {
-                    thishtml += "</div>";
-                    // console.log("FINISH")
-                }
             }
-
-            $("#content").append(thishtml);
+            $('#content').append(thishtml);
         }
 
         view.handleDelete = function() {
             $('.delete-product').on('click', function() {
-                var product = $(this).closest('.product-container');
-                product.fadeOut("slow", function() {
+                var product = $(this).closest('.card-container');
+                product.animate({
+                    opacity: 0.50
+                }, "slow", function() {
                     product.remove();
                 });
             })
@@ -76,31 +69,31 @@
         controller.init = function() {
             productView.showLoadingGif();
             controller.getProducts()
-            .then(function(response) {
-                controller.getTemplate()
-                .then(function(template) {
+                .then(function(response) {
+                    controller.getTemplate()
+                        .then(function(template) {
 
-                    var products = response.sales;
-                    var template = template;
+                            var products = response.sales;
+                            var template = template;
 
-                    products.forEach(function(productData, index) {
-                        controller.addProduct(productData, index)
-                    })
+                            products.forEach(function(productData, index) {
+                                controller.addProduct(productData, index)
+                            })
 
-                    productCtrl.products.forEach(function(product) {
-                        product.updatehtml(template);
-                    })
+                            productCtrl.products.forEach(function(product) {
+                                product.updatehtml(template);
+                            })
 
-                    productView.updateDOM(productCtrl.products);
-                    productView.handleDelete();
-                    productView.handleMouseOver();
-                    productView.hideLoadingGif();
+                            productView.updateDOM(productCtrl.products);
+                            productView.handleDelete();
+                            productView.handleMouseOver();
+                            productView.hideLoadingGif();
+                        }, function(err) {
+                            console.log("error fetching products")
+                        })
                 }, function(err) {
                     console.log("error fetching products")
                 })
-            }, function(err) {
-                console.log("error fetching products")
-            })
         }
         return controller;
     }
@@ -121,11 +114,11 @@
 
         product.updatehtml = function(template) {
             product.htmlview = template.replace('{image}', product.photo)
-            .replace('{title}', product.title)
-            .replace('{description}', product.description)
-            .replace('{tagline}', product.tagline)
-            .replace('{url}', product.url)
-            .replace('{custom_class}', product.custom_class);
+                .replace('{title}', product.title)
+                .replace('{description}', product.description)
+                .replace('{tagline}', product.tagline)
+                .replace('{url}', product.url)
+                .replace('{custom_class}', product.custom_class);
         }
 
         return product;
