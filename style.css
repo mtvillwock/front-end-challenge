@@ -1,8 +1,6 @@
 @font-face{font-family:'Glyphicons Halflings';src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot");src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2") format("woff2"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff") format("woff"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.ttf") format("truetype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")}
 
-body {
-  font-family: "Arial";
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab|Roboto:500|Lato:700);
 
 #body header {
   background-color: #E6E6E6;
@@ -15,7 +13,7 @@ a {
 }
 
 a:hover {
-    color: #0096FF;
+  color: #0096FF;
 }
 
 #body {
@@ -24,18 +22,20 @@ a:hover {
 
 .row {}
 .row:before, .row:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .page-title{
   font-size: 36px;
-  font-weight: bolder;
+  font-weight: bold;
+  font-family: 'Roboto Slab', 'Helvetica', sans-serif;
 }
 
 .page-tagline{
   text-transform: uppercase;
   font-size: 18px;
+  font-family: 'Lato', 'Helvetica', sans-serif;
 }
 
 
@@ -44,7 +44,9 @@ CARD CONTAINER
 */
 
 .card-container {
-  /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);*/
+  /*margin-right: 5px;*/
+  margin-bottom: 15px;
+  padding: 0;
 }
 
 /*.card-container:hover {}*/
@@ -55,14 +57,14 @@ PRODUCT CONTAINER
 
 .product-container{
   background-color: #fff;
-  border: 1px solid #afafaf;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
+  border-top: 5px #286090 solid;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   display: inline-block;
 }
 
 .image-container {
+  border: 3px solid #afafaf;
   position: relative;
   overflow: hidden;
 }
@@ -77,14 +79,24 @@ PRODUCT CONTAINER
   z-index:1;
   width: 100%;
   height: 100%;
-  padding: 10px;
   margin: auto;
-  border:1px solid #aeaeae;
+  border:1px solid #fff;
   background-color: #286090;
   color: #fff;
 }
 
-.delete-product{
+.overlay p {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.glyphicon.glyphicon-remove {
+    font-size: 20px;
+}
+
+.delete-product{}
+
+.delete-product:hover {
   color: red;
 }
 
@@ -100,13 +112,13 @@ PRODUCT CONTAINER
 .product-title {
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Monserrat', 'Helvetica', sans-serif;
   text-transform: uppercase;
 }
 
 .product-tagline {
   font-size: 16px;
-  font-family: 'Verdana', 'Helvetica', sans-serif;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
 .product-description{
