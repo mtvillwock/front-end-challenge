@@ -19,11 +19,12 @@ PRODUCT CONTAINER
   /*width:300px;*/
   border: 1px solid #aaa;
   margin-bottom: 15px;
-  display:inline-block;
+  display: inline-block;
 }
 
 .image-container {
   position: relative;
+  overflow: hidden;
 }
 
 .hidden {
@@ -42,7 +43,8 @@ PRODUCT CONTAINER
   background-color:#fff;
 }
 
-.product-container .delete-product{
+.product-container button.delete-product{
+  margin: 10px;
   color: red;
   float: right;
 }
@@ -51,17 +53,17 @@ PRODUCT CONTAINER
   text-decoration: none;
 }
 
-.product-container img{
-  width:100%;
-  height:auto;
+.product-container .image-container img{
+  width: 100%;
+  height: auto;
 }
 
-.product-title{
+.product-title {
   font-size:16px;
   font-weight: bolder;
 }
 
-.product-tagline{
+.product-tagline {
   font-size:16px;
 }
 
