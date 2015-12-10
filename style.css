@@ -1,19 +1,31 @@
+@font-face{font-family:'Glyphicons Halflings';src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot");src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2") format("woff2"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff") format("woff"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.ttf") format("truetype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")}
+
 body {
   font-family: "Arial";
 }
 
 #body header {
-  background-color: #408FC7;
-  color: #FCF8E6;
+  background-color: #E6E6E6;
+  color: #000000;
 }
 
 a {
   text-decoration: none;
-  color: #0096ff;
+  color: #4a494b;
+}
+
+a:hover {
+    color: #0096FF;
 }
 
 #body {
-  background-color: #aeaeae;
+  background-color: #F2F2F2;
+}
+
+.row {}
+.row:before, .row:after {
+    content: " ";
+    display: table;
 }
 
 .page-title{
@@ -32,9 +44,11 @@ PRODUCT CONTAINER
 */
 
 .product-container{
-  background-color: beige;
+  background-color: #fff;
   border: 1px solid #afafaf;
   margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
   display: inline-block;
 }
 
@@ -51,8 +65,8 @@ PRODUCT CONTAINER
   display: block;
   position: absolute;
   z-index:1;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   padding: 10px;
   margin: auto;
   border:1px solid #aeaeae;
@@ -75,8 +89,9 @@ PRODUCT CONTAINER
 
 .product-title {
   font-size: 16px;
-  font-weight: bolder;
-  font-family: 'Georgia', 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
 }
 
 .product-tagline {
