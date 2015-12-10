@@ -1,14 +1,42 @@
+@font-face{font-family:'Glyphicons Halflings';src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot");src:url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff2") format("woff2"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.woff") format("woff"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.ttf") format("truetype"),url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")}
+
 body {
   font-family: "Arial";
 }
 
-a {
-  text-decoration: none;
-  color: #0096ff;
+#body header {
+  background-color: #E6E6E6;
+  color: #000000;
 }
 
-.page-title{font-size:36px;}
-.page-tagline{font-size: 18px;}
+a {
+  text-decoration: none;
+  color: #4a494b;
+}
+
+a:hover {
+    color: #0096FF;
+}
+
+#body {
+  background-color: #F2F2F2;
+}
+
+.row {}
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.page-title{
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+.page-tagline{
+  text-transform: uppercase;
+  font-size: 18px;
+}
 
 
 /*
@@ -16,9 +44,11 @@ PRODUCT CONTAINER
 */
 
 .product-container{
-  /*width:300px;*/
-  border: 1px solid #aaa;
+  background-color: #fff;
+  border: 1px solid #afafaf;
   margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
   display: inline-block;
 }
 
@@ -32,21 +62,20 @@ PRODUCT CONTAINER
 }
 
 .overlay {
-  display:block;
-  position:absolute;
+  display: block;
+  position: absolute;
   z-index:1;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   padding: 10px;
   margin: auto;
-  border:1px solid #900;
-  background-color:#fff;
+  border:1px solid #aeaeae;
+  background-color: #286090;
+  color: #fff;
 }
 
-.product-container button.delete-product{
-  margin: 10px;
+.delete-product{
   color: red;
-  float: right;
 }
 
 .product-container a {
@@ -59,12 +88,15 @@ PRODUCT CONTAINER
 }
 
 .product-title {
-  font-size:16px;
-  font-weight: bolder;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Helvetica', sans-serif;
+  text-transform: uppercase;
 }
 
 .product-tagline {
-  font-size:16px;
+  font-size: 16px;
+  font-family: 'Verdana', 'Helvetica', sans-serif;
 }
 
 .product-description{
