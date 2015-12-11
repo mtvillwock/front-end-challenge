@@ -9,7 +9,6 @@
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 a:hover {
@@ -35,6 +34,7 @@ a:hover {
 .page-tagline{
   text-transform: uppercase;
   font-size: 18px;
+  font-weight: bolder;
   font-family: 'Lato', 'Helvetica', sans-serif;
 }
 
@@ -44,27 +44,23 @@ CARD CONTAINER
 */
 
 .card-container {
-  /*margin-right: 5px;*/
+  border-top-style: 5px #286090 solid;
   margin-bottom: 15px;
-  padding: 0;
+  padding: 10px;
 }
-
-/*.card-container:hover {}*/
 
 /*
 PRODUCT CONTAINER
 */
 
 .product-container{
-  background-color: #286090;
-  /*border-top: 5px solid orange;*/
+  background-color: #fff;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   display: inline-block;
 }
 
 .image-container {
-  /*border: 3px solid #afafaf;*/
   position: relative;
   overflow: hidden;
 }
@@ -91,20 +87,16 @@ PRODUCT CONTAINER
 }
 
 .glyphicon.glyphicon-remove {
-    font-size: 20px;
-    color: #fff;
+    font-size: 30px;
+    color: #286090;
 }
 
 .delete-product{
-  margin: 5px;
+  margin: 5px 10px;
 }
 
 .delete-product:hover {
   color: red;
-}
-
-.product-container a {
-  text-decoration: none;
 }
 
 .product-container .image-container img{
@@ -114,7 +106,7 @@ PRODUCT CONTAINER
 
 .product-title {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: 'Monserrat', 'Helvetica', sans-serif;
   text-transform: uppercase;
 }
@@ -125,5 +117,5 @@ PRODUCT CONTAINER
 }
 
 .product-description{
-  padding:10px;
+  padding: 10px;
 }
